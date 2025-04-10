@@ -4,24 +4,48 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:background="#FFF5FF">
+    android:background="#FDF5F6">
 
-    <TextView
+    <EditText
         android:id="@+id/taskTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Task Title"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#333" />
+        android:hint="Edit title"
+        android:inputType="textPersonName"
+        android:autofillHints="name" />
 
-    <TextView
+    <EditText
+        android:id="@+id/taskDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Edit description"
+        android:inputType="textMultiLine"
+        android:autofillHints="description"
+        android:minLines="2" />
+
+    <EditText
         android:id="@+id/taskDueDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Due Date"
-        android:textSize="18sp"
-        android:layout_marginTop="12dp"
-        android:textColor="#666" />
+        android:hint="Edit due date (e.g., 2025-04-12)"
+        android:inputType="date"
+        android:autofillHints="date" />
 
+    <Button
+        android:id="@+id/btnUpdate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Update Task"
+        android:backgroundTint="#9370DB"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="12dp" />
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Delete Task"
+        android:backgroundTint="#D32F2F"
+        android:textColor="#FFFFFF"
+        android:layout_marginTop="8dp" />
 </LinearLayout>
